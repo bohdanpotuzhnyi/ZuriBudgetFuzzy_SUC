@@ -1,0 +1,181 @@
+#!/bin/bash
+
+# Define the filenames and paths
+MARKDOWN_FILE="report.md"
+OUTPUT_FILE="report.pdf"
+# Would be nice to make it a bit more universal later
+TEMPLATE="/Users/bohdanpotuzhnyi/Development/pandoc-templates/pandoc-latex-template/template-multi-file/eisvogel.latex"
+PLANTUML_DIR="images/puml"
+#DRAWIO_DIR="pictures/drawios"
+#BPMN_DIR="pictures/bpmns"
+#SVG_DIR="pictures/svg"
+DPI=300
+
+# Check if necessary files exist
+if [ ! -f "$MARKDOWN_FILE" ]; then
+  echo "Markdown file ($MARKDOWN_FILE) not found!"
+  exit 1
+fi
+
+if [ ! -d "$PLANTUML_DIR" ]; then
+  echo "PlantUML directory ($PLANTUML_DIR) not found!"
+  exit 1
+fi
+#
+#if [ ! -d "$DRAWIO_DIR" ]; then
+#  echo "Drawio directory ($DRAWIO_DIR) not found!"
+#  exit 1
+#fi
+#
+#if [ ! -d "$BPMN_DIR" ]; then
+#  echo "BPMN directory ($BPMN_DIR) not found!"
+#  exit 1
+#fi
+#
+#if [ ! -d "$SVG_DIR" ]; then
+#  echo "SVG directory ($SVG_DIR) not found!"
+#  exit 1
+#fi
+
+# Rebuild all .puml files in the PlantUML directory
+echo "Searching for .puml files in $PLANTUML_DIR..."
+for PLANTUML_FILE in "$PLANTUML_DIR"/*.puml; do
+  if [ -f "$PLANTUML_FILE" ]; then
+    # Derive the SVG and PNG filenames
+    FILENAME=$(basename "$PLANTUML_FILE" .puml)
+    SVG_FILE="$PLANTUML_DIR/$FILENAME.svg"
+    PNG_FILE="$PLANTUML_DIR/$FILENAME.png"
+
+    echo "Processing $PLANTUML_FILE..."
+
+    # Generate SVG from PlantUML
+    echo "Generating SVG for $FILENAME..."
+    plantuml "$PLANTUML_FILE" -tsvg
+
+    if [ $? -eq 0 ]; then
+      echo "SVG generated successfully: $SVG_FILE"
+    else
+      echo "Failed to generate SVG for $PLANTUML_FILE."
+      exit 1
+    fi
+
+    # Convert SVG to PNG using Inkscape
+    if [ -f "$SVG_FILE" ]; then
+      echo "Converting $SVG_FILE to PNG..."
+        inkscape "$SVG_FILE" --export-type="png" --export-filename="$PNG_FILE" --export-dpi=$DPI
+
+        if [ $? -eq 0 ]; then
+          echo "PNG generated successfully: $PNG_FILE"
+
+          # Remove the SVG file after conversion
+          echo "Removing $SVG_FILE..."
+          rm "$SVG_FILE"
+
+          if [ $? -eq 0 ]; then
+            echo "SVG file removed: $SVG_FILE"
+          else
+            echo "Failed to remove SVG file: $SVG_FILE"
+            exit 1
+          fi
+        else
+          echo "Failed to convert $SVG_FILE to PNG."
+          exit 1
+        fi
+      else
+        echo "SVG file not found: $SVG_FILE"
+        exit 1
+      fi
+  else
+    echo "No .puml files found in $PLANTUML_DIR"
+  fi
+done
+
+# Additional section for converting standalone SVG files in a specific directory
+#echo "Converting SVG files to PNG in $SVG_DIR..."
+#for SVG_FILE in "$SVG_DIR"/*.svg; do
+#  if [ -f "$SVG_FILE" ]; then
+#    FILENAME=$(basename "$SVG_FILE" .svg)
+#    PNG_FILE="$SVG_DIR/$FILENAME.png"
+#
+#    echo "Converting $SVG_FILE to PNG..."
+#    inkscape "$SVG_FILE" --export-type="png" --export-filename="$PNG_FILE" --export-dpi=$DPI
+#
+#    if [ $? -eq 0 ]; then
+#      echo "PNG generated successfully: $PNG_FILE"
+#    else
+#      echo "Failed to convert $SVG_FILE to PNG."
+#      exit 1
+#    fi
+#  else
+#    echo "No SVG files found in $SVG_DIR"
+#  fi
+#done
+
+# Process all .drawio files in the drawios directory
+#echo "Searching for .drawio files in $DRAWIO_DIR..."
+#for DRAWIO_FILE in "$DRAWIO_DIR"/*.drawio; do
+#  if [ -f "$DRAWIO_FILE" ]; then
+#    # Derive the PNG filename
+#    FILENAME=$(basename "$DRAWIO_FILE" .drawio)
+#    PNG_FILE="$DRAWIO_DIR/$FILENAME.png"
+#
+#    echo "Processing $DRAWIO_FILE..."
+#
+#    # Convert .drawio to PNG using the draw.io application
+#    echo "Converting $DRAWIO_FILE to PNG..."
+#    /Applications/draw.io.app/Contents/MacOS/draw.io --export "$DRAWIO_FILE" --format png --output "$PNG_FILE" --crop --transparent --scale 3
+#
+#    if [ $? -eq 0 ]; then
+#      echo "PNG generated successfully: $PNG_FILE"
+#    else
+#      echo "Failed to convert $DRAWIO_FILE to PNG."
+#      exit 1
+#    fi
+#  else
+#    echo "No .drawio files found in $DRAWIO_DIR"
+#  fi
+#done
+
+# Process all .bpmn files in the bpmns directory
+#echo "Searching for .bpmn files in $BPMN_DIR..."
+#for BPMN_FILE in "$BPMN_DIR"/*.bpmn; do
+#  if [ -f "$BPMN_FILE" ]; then
+#    # Derive the PNG filename
+#    FILENAME=$(basename "$BPMN_FILE" .bpmn)
+#    PNG_FILE="$BPMN_DIR/$FILENAME.png"
+#
+#    echo "Processing $BPMN_FILE..."
+#
+#    # Convert BPMN to PNG using the bpmn-to-image tool
+#    echo "Converting $BPMN_FILE to PNG..."
+#    bpmn-to-image "$BPMN_FILE:$PNG_FILE" --scale 3 --no-footer
+#
+#    if [ $? -eq 0 ]; then
+#      echo "PNG generated successfully: $PNG_FILE"
+#    else
+#      echo "Failed to convert $BPMN_FILE to PNG."
+#      exit 1
+#    fi
+#  else
+#    echo "No .bpmn files found in $BPMN_DIR"
+#  fi
+#done
+
+# Run pandoc to generate the PDF
+echo "Generating PDF from Markdown..."
+pandoc -o "$OUTPUT_FILE" "$MARKDOWN_FILE" \
+--template="$TEMPLATE" \
+--listings \
+--from markdown+citations \
+--bibliography=bib/references.bib \
+--csl=bib/apa.csl \
+--filter pandoc-include \
+--citeproc
+#Add citeproc when they will resolve the issue
+# Check if PDF generation was successful
+if [ $? -eq 0 ]; then
+  echo "PDF generated successfully: $OUTPUT_FILE"
+else
+  echo "Failed to generate PDF."
+  exit 1
+fi

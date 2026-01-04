@@ -1,0 +1,7 @@
+Participant,Task A completed from request #,Task A correct (0/1),Task B completed from request #,Task B correct (0/1),Clarity (1-5),Explainable (1-5),Usability (1-5),Preference (System vs Zurich API),Notes
+P1,1,1,1,1,4,4,4,System,-
+P2,1,1,2,1,4,3,4,API,"If I need to use API, I will go to the one with consolidated data."
+P3,1,1,1,1,4,4,5,System,-
+P4,1,1,1,1,4,4,4,System,-
+P5,2,1,2,1,4,4,4,System,"Nice quick sum-up, API calls should be replaced with something better."
+P6,1,1,1,1,4,4,4,System,-

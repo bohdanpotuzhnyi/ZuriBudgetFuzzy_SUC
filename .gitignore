@@ -1,0 +1,21 @@
+# macOS Finder metadata
+.DS_Store
+
+# IDE settings
+.idea/
+.vscode/
+
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment directories
+.venv/
+venv/
+env/
+
+# Tool caches
+.mypy_cache/
+.pytest_cache/
+.ipynb_checkpoints/

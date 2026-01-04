@@ -1,0 +1,7 @@
+Participant,Task A completed from request #,Task A correct (0/1),Task B completed from request #,Task B correct (0/1),Clarity (1-5),Explainable (1-5),Usability (1-5),Preference (System vs Zürich API),Notes
+P1,1,1,1,1,5,4,5,System,"The idea is quite nice. It might be useful once it's converted from a PoC into an actual product."
+P2,1,1,1,1,5,3,5,System,"Quick insights and sentence-like messaging are nice. And I like that there's no LLM or other crap involved."
+P3,1,1,1,1,4,4,5,System,"The use cases need to be extended. The NLU looks rather simple, but the system could be useful to make complicated requests uncomplicated."
+P4,1,1,1,1,4,4,4,System,-
+P5,1,1,1,1,5,4,5,System,"Chat-like messaging is definitely better than an API."
+P6,1,1,1,1,4,4,4,System,-

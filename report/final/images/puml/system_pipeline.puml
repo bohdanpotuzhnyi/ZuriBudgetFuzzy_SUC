@@ -1,0 +1,74 @@
+@startuml
+title Zürich Budget Q&A – End-to-End Flow
+
+!define BFH_MAIN_COLOR #000000
+
+skinparam participant {
+    BackgroundColor BFH_MAIN_COLOR
+    BorderColor BFH_MAIN_COLOR
+    FontColor #FFFFFF
+}
+skinparam database {
+    BackgroundColor #FFFFFF
+    FontColor BFH_MAIN_COLOR
+    BorderColor BFH_MAIN_COLOR
+}
+skinparam actor {
+    BackgroundColor #FFFFFF
+    FontColor BFH_MAIN_COLOR
+    BorderColor BFH_MAIN_COLOR
+}
+skinparam sequence {
+    ArrowColor BFH_MAIN_COLOR
+    GroupBorderColor BFH_MAIN_COLOR
+    GroupBackgroundColor #FFFFFF
+}
+skinparam component {
+    BackgroundColor #FFFFFF
+    FontColor BFH_MAIN_COLOR
+    BorderColor BFH_MAIN_COLOR
+}
+skinparam rectangle {
+    BackgroundColor #FFFFFF
+    FontColor BFH_MAIN_COLOR
+}
+
+actor Citizen as User
+rectangle "Streamlit UI / CLI" as UI
+component "Query Service" as QS
+component "NLU Parser\n(field weights + confidence)" as NLU
+
+component "Summarizer Module" as Summ
+component "load_or_fetch()" as Loader
+database "RPK API" as API
+database "CSV Cache\n(zrh_budget_by_dept_year.csv)" as Cache
+
+component "Dept Totals & Shares" as Aggregator
+component "Trend Analyzer\n(Theil–Sen slope)" as Trend
+
+database "Label calibration\n(label_calibration.json)" as Calib
+component "Fuzzy Labeller\n(level + trend μ)" as Fuzzy
+component "Response Templates\n(JSON + narrative + evidence)" as Templates
+
+User --> UI : free-text question
+UI --> QS : submit()
+QS --> NLU : parse(question)
+NLU --> QS : timeline + field + weightings
+QS --> Summ : structured request
+
+Summ --> Loader : get data
+API --> Loader : (if cache missing)
+Cache --> Loader : (if cache available)
+
+Loader --> Aggregator : yearly totals per dept
+Aggregator --> Trend : shares by dept/year
+Trend --> Fuzzy : slopes + shares
+Calib --> Fuzzy : trapezoid params
+
+Fuzzy --> Templates : labels + μ
+Templates --> Summ : message + JSON evidence
+
+Summ --> QS : response + provenance
+QS --> UI : nlu_interpretation + response
+UI --> User : text answer\n+ JSON metadata
+@enduml

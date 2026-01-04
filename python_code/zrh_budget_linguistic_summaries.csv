@@ -1,0 +1,10 @@
+departement,last_year,share_last_pct,slope_pp_per_year,slope_pct_of_mean,level_label,level_mu,trend_label,trend_mu,sentence
+Schul- und Sportdepartement,2024,29.57156531477675,0.2999753957445108,1.0557784208380923,high,1.0,stable,0.8884431583238155,Schul- und Sportdepartement: share is HIGH and STABLE (+0.30 pp/yr; 2019→2024: 28.03%→29.57%).
+Sozialdepartement,2024,17.9921646067461,-1.2149392134798749,-5.260106568841564,medium,1.0,falling,0.9868738899079004,Sozialdepartement: share is MEDIUM and FALLING (-1.21 pp/yr; 2019→2024: 26.14%→17.99%).
+Departement der Industriellen Betriebe,2024,12.119783962813877,0.8227695082423253,8.183035338650821,medium,0.4239567925627753,rising,0.9564267152223872,Departement der Industriellen Betriebe: share is MEDIUM and RISING (+0.82 pp/yr; 2019→2024: 8.01%→12.12%).
+Tiefbau- und Entsorgungsdepartement,2024,11.899560760698764,-0.14517237446390752,-1.343586443488056,medium,0.3799121521397527,falling,0.5623909623253707,Tiefbau- und Entsorgungsdepartement: share is MEDIUM and FALLING (-0.15 pp/yr; 2019→2024: 11.76%→11.90%).
+Sicherheitsdepartement,2024,8.060856285450036,-0.05844673882496707,-0.7119688573774194,low,0.8878287429099927,stable,1.0,Sicherheitsdepartement: share is LOW and STABLE (-0.06 pp/yr; 2019→2024: 8.35%→8.06%).
+Hochbaudepartement,2024,7.679025382535743,0.23364371998421282,3.785284744471092,low,0.9641949234928514,rising,1.0,Hochbaudepartement: share is LOW and RISING (+0.23 pp/yr; 2019→2024: 5.73%→7.68%).
+Gesundheits- und Umweltdepartement,2024,7.015490472887402,-0.06845106139128632,-0.9402582862296288,low,1.0,stable,1.0,Gesundheits- und Umweltdepartement: share is LOW and STABLE (-0.07 pp/yr; 2019→2024: 6.73%→7.02%).
+Präsidialdepartement,2024,4.196583363890303,-0.10500438088515907,-2.3094467736496687,low,1.0,falling,1.0,Präsidialdepartement: share is LOW and FALLING (-0.11 pp/yr; 2019→2024: 4.52%→4.20%).
+Behörden und Gesamtverwaltung,2024,1.4649698502010244,0.14688331050401304,10.327368961580131,low,1.0,rising,0.934089906650207,Behörden und Gesamtverwaltung: share is LOW and RISING (+0.15 pp/yr; 2019→2024: 0.73%→1.46%).

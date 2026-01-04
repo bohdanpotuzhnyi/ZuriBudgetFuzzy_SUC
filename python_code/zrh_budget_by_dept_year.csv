@@ -1,0 +1,61 @@
+jahr,betrag,departement_key,departement_name
+2019,27082700,10,Behörden und Gesamtverwaltung
+2020,56637600,10,Behörden und Gesamtverwaltung
+2021,56196900,10,Behörden und Gesamtverwaltung
+2022,56107500,10,Behörden und Gesamtverwaltung
+2023,99166900,10,Behörden und Gesamtverwaltung
+2024,70147500,10,Behörden und Gesamtverwaltung
+2019,167388100,15,Präsidialdepartement
+2020,181359700,15,Präsidialdepartement
+2021,209919300,15,Präsidialdepartement
+2022,197841600,15,Präsidialdepartement
+2023,186512400,15,Präsidialdepartement
+2024,200946000,15,Präsidialdepartement
+2019,-2591228700,20,Finanzdepartement
+2020,-2700401800,20,Finanzdepartement
+2021,-2632882200,20,Finanzdepartement
+2022,-2577052800,20,Finanzdepartement
+2023,-2435836500,20,Finanzdepartement
+2024,-2557002900,20,Finanzdepartement
+2019,309661500,25,Sicherheitsdepartement
+2020,330090900,25,Sicherheitsdepartement
+2021,336457300,25,Sicherheitsdepartement
+2022,341489500,25,Sicherheitsdepartement
+2023,365941500,25,Sicherheitsdepartement
+2024,385979900,25,Sicherheitsdepartement
+2019,249454700,30,Gesundheits- und Umweltdepartement
+2020,282488600,30,Gesundheits- und Umweltdepartement
+2021,304412100,30,Gesundheits- und Umweltdepartement
+2022,344194200,30,Gesundheits- und Umweltdepartement
+2023,322627300,30,Gesundheits- und Umweltdepartement
+2024,335924400,30,Gesundheits- und Umweltdepartement
+2019,436114200,35,Tiefbau- und Entsorgungsdepartement
+2020,420658800,35,Tiefbau- und Entsorgungsdepartement
+2021,419329500,35,Tiefbau- und Entsorgungsdepartement
+2022,421162700,35,Tiefbau- und Entsorgungsdepartement
+2023,460507400,35,Tiefbau- und Entsorgungsdepartement
+2024,569789500,35,Tiefbau- und Entsorgungsdepartement
+2019,212317400,40,Hochbaudepartement
+2020,224592600,40,Hochbaudepartement
+2021,235178000,40,Hochbaudepartement
+2022,272270500,40,Hochbaudepartement
+2023,257652600,40,Hochbaudepartement
+2024,367696600,40,Hochbaudepartement
+2019,296792000,45,Departement der Industriellen Betriebe
+2020,267836500,45,Departement der Industriellen Betriebe
+2021,451853400,45,Departement der Industriellen Betriebe
+2022,464557400,45,Departement der Industriellen Betriebe
+2023,516687600,45,Departement der Industriellen Betriebe
+2024,580334500,45,Departement der Industriellen Betriebe
+2019,1039282300,50,Schul- und Sportdepartement
+2020,1081407400,50,Schul- und Sportdepartement
+2021,1157604600,50,Schul- und Sportdepartement
+2022,1183956200,50,Schul- und Sportdepartement
+2023,1308571500,50,Schul- und Sportdepartement
+2024,1415982300,50,Schul- und Sportdepartement
+2019,969056200,55,Sozialdepartement
+2020,971500300,55,Sozialdepartement
+2021,985510400,55,Sozialdepartement
+2022,954001700,55,Sozialdepartement
+2023,1036680100,55,Sozialdepartement
+2024,861523100,55,Sozialdepartement

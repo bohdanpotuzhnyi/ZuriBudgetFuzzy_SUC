@@ -1,0 +1,715 @@
+{
+  "schema_version": "0.2.7",
+  "items": [
+    {
+      "id": 1,
+      "utterance": "So what are they spending more on now?",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 2,
+      "utterance": "What’s increasing the most since 2019?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 3,
+      "utterance": "Biggest decreases lately?",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 4,
+      "utterance": "Give me a quick overview of spending shifts.",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 5,
+      "utterance": "Give me details on the main movers across departments.",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 6,
+      "utterance": "What changed since 2021 across the whole city budget?",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 7,
+      "utterance": "What changed since 2022?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 8,
+      "utterance": "What changed since 2023?",
+      "expected": {
+        "timeline": {
+          "since": 2023
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 9,
+      "utterance": "Summarize budget priorities since 2020.",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 10,
+      "utterance": "Kurz: Wo steigen die Ausgaben am stärksten?",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 11,
+      "utterance": "Details: Welche Departemente verlieren am meisten Anteil?",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 12,
+      "utterance": "Which departments gained the most share of the total budget?",
+      "expected": {
+        "timeline": "all",
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 13,
+      "utterance": "Show me the top budget winners and losers since 2019.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "all",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 14,
+      "utterance": "In the last 3 years, what’s the biggest shift?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 15,
+      "utterance": "Over 2019-2024, what moved the most?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "all",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 16,
+      "utterance": "How is the government planning money for education?",
+      "expected": {
+        "timeline": "all",
+        "field": "education",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 17,
+      "utterance": "Education since 2019?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "education",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 18,
+      "utterance": "Education since 2021, quick.",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "education",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 19,
+      "utterance": "Give me a detailed trend for education spending.",
+      "expected": {
+        "timeline": "all",
+        "field": "education",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 20,
+      "utterance": "Is education rising or falling recently?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "education",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 21,
+      "utterance": "Bildungsausgaben seit 2019 – kurz zusammenfassen.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "education",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 22,
+      "utterance": "Schul- und Sportdepartement seit 2020: Trend?",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "education",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 23,
+      "utterance": "Give me a short summary for schools and sports budget.",
+      "expected": {
+        "timeline": "all",
+        "field": "education",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 24,
+      "utterance": "What’s the trend in healthcare spending?",
+      "expected": {
+        "timeline": "all",
+        "field": "healthcare",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 25,
+      "utterance": "Healthcare since 2020?",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "healthcare",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 26,
+      "utterance": "Is healthcare a high or low priority now?",
+      "expected": {
+        "timeline": "all",
+        "field": "healthcare",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 27,
+      "utterance": "Detailed healthcare summary, please.",
+      "expected": {
+        "timeline": "all",
+        "field": "healthcare",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 28,
+      "utterance": "Gesundheit seit 2021: Trend?",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "healthcare",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 29,
+      "utterance": "Gesundheits- und Umweltdepartement: kurze Übersicht.",
+      "expected": {
+        "timeline": "all",
+        "field": "healthcare",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 30,
+      "utterance": "In the last 2 years, how did healthcare change?",
+      "expected": {
+        "timeline": {
+          "since": 2023
+        },
+        "field": "healthcare",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 31,
+      "utterance": "Transport budget trend since 2019.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "transport",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 32,
+      "utterance": "Are they prioritizing transport more lately?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "transport",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 33,
+      "utterance": "Quick transport summary.",
+      "expected": {
+        "timeline": "all",
+        "field": "transport",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 34,
+      "utterance": "Detailed transport explanation.",
+      "expected": {
+        "timeline": "all",
+        "field": "transport",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 35,
+      "utterance": "Verkehrsausgaben seit 2020?",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "transport",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 36,
+      "utterance": "Tiefbau- und Entsorgungsdepartement seit 2019: Details.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "transport",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 37,
+      "utterance": "Public transport and roads: short summary please.",
+      "expected": {
+        "timeline": "all",
+        "field": "transport",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 38,
+      "utterance": "Energy spending trend.",
+      "expected": {
+        "timeline": "all",
+        "field": "energy",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 39,
+      "utterance": "Energy since 2021, detailed.",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "energy",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 40,
+      "utterance": "Energie seit 2019 – kurz.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "energy",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 41,
+      "utterance": "Departement der Industriellen Betriebe: Trend seit 2020?",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "energy",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 42,
+      "utterance": "Are utilities and energy getting more money lately?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "energy",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 43,
+      "utterance": "Digital infrastructure: is it rising?",
+      "expected": {
+        "timeline": "all",
+        "field": "digital infrastructure",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 44,
+      "utterance": "Digital infrastructure since 2022?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "digital infrastructure",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 45,
+      "utterance": "Quick summary: digital infrastructure investments.",
+      "expected": {
+        "timeline": "all",
+        "field": "digital infrastructure",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 46,
+      "utterance": "Detailed: how has digital infrastructure changed since 2019?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "digital infrastructure",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 47,
+      "utterance": "Security spending since 2019?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "security",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 48,
+      "utterance": "Is security stable or rising?",
+      "expected": {
+        "timeline": "all",
+        "field": "security",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 49,
+      "utterance": "Security, detailed.",
+      "expected": {
+        "timeline": "all",
+        "field": "security",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 50,
+      "utterance": "Sicherheit seit 2022?",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "security",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 51,
+      "utterance": "Sicherheitsdepartement: kurze Zusammenfassung.",
+      "expected": {
+        "timeline": "all",
+        "field": "security",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 52,
+      "utterance": "Housing budget trend.",
+      "expected": {
+        "timeline": "all",
+        "field": "housing",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 53,
+      "utterance": "Housing since 2020?",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "housing",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 54,
+      "utterance": "Is housing currently high priority?",
+      "expected": {
+        "timeline": "all",
+        "field": "housing",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 55,
+      "utterance": "Housing, quick.",
+      "expected": {
+        "timeline": "all",
+        "field": "housing",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 56,
+      "utterance": "Bauen/Wohnraum seit 2019 – Details.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "housing",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 57,
+      "utterance": "Hochbaudepartement seit 2021: Trend?",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "housing",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 58,
+      "utterance": "What’s happening in the presidency department?",
+      "expected": {
+        "timeline": "all",
+        "field": "presidency",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 59,
+      "utterance": "Presidency since 2021?",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "presidency",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 60,
+      "utterance": "Präsidialdepartement seit 2022 – kurz.",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "presidency",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 61,
+      "utterance": "Detailed: presidency department since 2019.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "presidency",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 62,
+      "utterance": "Administration spending trend since 2019.",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "administration",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 63,
+      "utterance": "Overall administration: stable or rising?",
+      "expected": {
+        "timeline": "all",
+        "field": "administration",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 64,
+      "utterance": "Behörden und Gesamtverwaltung seit 2020 – Details.",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "administration",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 65,
+      "utterance": "Short summary: administrative services budget.",
+      "expected": {
+        "timeline": "all",
+        "field": "administration",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 66,
+      "utterance": "Finance department: trend since 2019?",
+      "expected": {
+        "timeline": {
+          "since": 2019
+        },
+        "field": "finance",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 67,
+      "utterance": "Finance since 2022, quick.",
+      "expected": {
+        "timeline": {
+          "since": 2022
+        },
+        "field": "finance",
+        "generalization_level": 0
+      }
+    },
+    {
+      "id": 68,
+      "utterance": "Finanzdepartement: ist der Anteil hoch oder niedrig?",
+      "expected": {
+        "timeline": "all",
+        "field": "finance",
+        "generalization_level": 1
+      }
+    },
+    {
+      "id": 69,
+      "utterance": "Detailed: finance department changes since 2020.",
+      "expected": {
+        "timeline": {
+          "since": 2020
+        },
+        "field": "finance",
+        "generalization_level": 2
+      }
+    },
+    {
+      "id": 70,
+      "utterance": "In the last 4 years, how did finance change?",
+      "expected": {
+        "timeline": {
+          "since": 2021
+        },
+        "field": "finance",
+        "generalization_level": 1
+      }
+    }
+  ]
+}
